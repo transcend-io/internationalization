@@ -299,9 +299,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@transcend-io/logger@workspace:.":
+"@transcend-io/internationalization@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@transcend-io/logger@workspace:."
+  resolution: "@transcend-io/internationalization@workspace:."
   dependencies:
     "@types/chai": ^4
     "@types/mocha": ^9.0.0
