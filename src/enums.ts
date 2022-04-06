@@ -26,8 +26,14 @@ export enum LanguageKey {
   FrFr = 'fr-FR',
   /** German */
   DeDe = 'de-DE',
+  /** Austrian German */
+  DeAt = 'de-AT',
+  /** Swiss German */
+  DeCh = 'de-CH',
   /** Italian */
   ItIt = 'it-IT',
+  /** Swiss Italian */
+  ItCh = 'it-CH',
   /** Afrikaans */
   AfZz = 'af-ZA',
   /** Bulgarian */
@@ -102,6 +108,8 @@ export enum LanguageKey {
   FrBe = 'fr-BE',
   /** Quebec */
   FrCa = 'fr-CA',
+  /** French (Switzerland) */
+  FrCh = 'fr-CH',
   /** Ireland */
   EnIe = 'en-IE',
   /** Dutch */
@@ -112,4 +120,6 @@ export enum LanguageKey {
   Es419 = 'es-419',
   /** Chinese (Traditional) */
   ZhHk = 'zh-HK',
+  /** Hebrew (Israel) */
+  HeIl = 'he-IL',
 }
