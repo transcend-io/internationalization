@@ -124,4 +124,6 @@ export enum LanguageKey {
   ZhHk = 'zh-HK',
   /** Hebrew (Israel) */
   HeIl = 'he-IL',
+  /** English (New Zealand) */
+  EnNz = 'en-NZ',
 }
