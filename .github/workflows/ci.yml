@@ -18,8 +18,6 @@ jobs:
           max_attempts: 3
           retry_on: error
           command: yarn install --immutable
-      - name: 'Run tsc'
-        run: yarn tsc:build
       - name: Build the typescript code
         run: yarn build
       - uses: actions/upload-artifact@main
