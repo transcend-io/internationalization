@@ -1,3 +1,5 @@
+import { makeEnum } from '@transcend-io/type-utils';
+
 /**
  * The language identifier keys
  *
@@ -127,3 +129,71 @@ export enum LanguageKey {
   /** English (New Zealand) */
   EnNz = 'en-NZ',
 }
+
+export const ConsentManagerLanguageKey = makeEnum({
+  // TODO: https://transcend.height.app/T-5873 - migrate these
+  En: LanguageKey.En,
+  Ar: LanguageKey.Ar,
+  Fr: LanguageKey.Fr,
+  De: LanguageKey.De,
+  It: LanguageKey.It,
+  Ja: LanguageKey.Ja,
+  Ru: LanguageKey.Ru,
+
+  DeAt: LanguageKey.DeAt,
+  DeCh: LanguageKey.DeCh,
+  ItCh: LanguageKey.ItCh,
+  FrCh: LanguageKey.FrCh,
+  NlBe: LanguageKey.NlBe,
+  HeIl: LanguageKey.HeIl,
+  EnNz: LanguageKey.EnNz,
+  ArAe: LanguageKey.ArAe,
+  FrFr: LanguageKey.FrFr,
+  DeDe: LanguageKey.DeDe,
+  ItIt: LanguageKey.ItIt,
+  AfZz: LanguageKey.AfZz,
+  BgBg: LanguageKey.BgBg,
+  ZhCn: LanguageKey.ZhCn,
+  HrHr: LanguageKey.HrHr,
+  CsCz: LanguageKey.CsCz,
+  DaDk: LanguageKey.DaDk,
+  EnGb: LanguageKey.EnGb,
+  EnCa: LanguageKey.EnCa,
+  EnAe: LanguageKey.EnAe,
+  FiFi: LanguageKey.FiFi,
+  ElGr: LanguageKey.ElGr,
+  HiIn: LanguageKey.HiIn,
+  HuHu: LanguageKey.HuHu,
+  IdId: LanguageKey.IdId,
+  JaJp: LanguageKey.JaJp,
+  KoKr: LanguageKey.KoKr,
+  LtLt: LanguageKey.LtLt,
+  MsMy: LanguageKey.MsMy,
+  NbNi: LanguageKey.NbNi,
+  PlPl: LanguageKey.PlPl,
+  PtBr: LanguageKey.PtBr,
+  PtPt: LanguageKey.PtPt,
+  RoRo: LanguageKey.RoRo,
+  SrLatnRs: LanguageKey.SrLatnRs,
+  SvSe: LanguageKey.SvSe,
+  TaIn: LanguageKey.TaIn,
+  ThTh: LanguageKey.ThTh,
+  TrTr: LanguageKey.TrTr,
+  UkUa: LanguageKey.UkUa,
+  ViVn: LanguageKey.ViVn,
+  EnUS: LanguageKey.EnUS,
+  EnAu: LanguageKey.EnAu,
+  FrBe: LanguageKey.FrBe,
+  FrCa: LanguageKey.FrCa,
+  EnIe: LanguageKey.EnIe,
+  NlNl: LanguageKey.NlNl,
+  EsEs: LanguageKey.EsEs,
+  Es419: LanguageKey.Es419,
+  ZhHk: LanguageKey.ZhHk,
+});
+
+/**
+ * Override type
+ */
+export type ConsentManagerLanguageKey =
+  typeof ConsentManagerLanguageKey[keyof typeof ConsentManagerLanguageKey];
