@@ -6,13 +6,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      # 'Install yarn v2 dependencies'
+      - uses: actions/setup-node@v3.1.1
+        with:
+          node-version: '14.17.3'
+      - run: npm install -g "yarn@1.22.5"
+        shell: bash
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - name: Build the typescript code
         run: yarn build
       - uses: actions/upload-artifact@main
         with:
           name: build artifacts
           path: build/
-
   run-mocha:
     runs-on: ubuntu-latest
     strategy:

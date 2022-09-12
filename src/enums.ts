@@ -1,3 +1,5 @@
+import { makeEnum } from '@transcend-io/type-utils';
+
 /**
  * The language identifier keys
  *
@@ -127,3 +129,48 @@ export enum LanguageKey {
   /** English (New Zealand) */
   EnNz = 'en-NZ',
 }
+
+export const ConsentManagerLanguageKey = makeEnum({
+  En: LanguageKey.En,
+  FrFr: LanguageKey.FrFr,
+  DeDe: LanguageKey.DeDe,
+  ItIt: LanguageKey.ItIt,
+  PtBr: LanguageKey.PtBr,
+  Es419: LanguageKey.Es419,
+  EsEs: LanguageKey.EsEs,
+  CsCz: LanguageKey.CsCz,
+  DaDk: LanguageKey.DaDk,
+  FiFi: LanguageKey.FiFi,
+  ElGr: LanguageKey.ElGr,
+  LtLt: LanguageKey.LtLt,
+  NbNi: LanguageKey.NbNi,
+  PlPl: LanguageKey.PlPl,
+  RoRo: LanguageKey.RoRo,
+  RuRu: LanguageKey.RuRu,
+  SrLatnRs: LanguageKey.SrLatnRs,
+  SvSe: LanguageKey.SvSe,
+  ArAe: LanguageKey.ArAe,
+  ZhCn: LanguageKey.ZhCn,
+  ZhHk: LanguageKey.ZhHk,
+  AfZz: LanguageKey.AfZz,
+  BgBg: LanguageKey.BgBg,
+  HrHr: LanguageKey.HrHr,
+  HuHu: LanguageKey.HuHu,
+  IdId: LanguageKey.IdId,
+  MsMy: LanguageKey.MsMy,
+  HiIn: LanguageKey.HiIn,
+  MrIn: LanguageKey.MrIn,
+  TaIn: LanguageKey.TaIn,
+  ThTh: LanguageKey.ThTh,
+  TrTr: LanguageKey.TrTr,
+  UkUa: LanguageKey.UkUa,
+  ViVn: LanguageKey.ViVn,
+  NlNl: LanguageKey.NlNl,
+  HeIl: LanguageKey.HeIl,
+});
+
+/**
+ * Override type
+ */
+export type ConsentManagerLanguageKey =
+  typeof ConsentManagerLanguageKey[keyof typeof ConsentManagerLanguageKey];
