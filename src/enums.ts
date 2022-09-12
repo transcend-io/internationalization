@@ -150,6 +150,8 @@ export const ConsentManagerLanguageKey = makeEnum({
   SrLatnRs: LanguageKey.SrLatnRs,
   SvSe: LanguageKey.SvSe,
   ArAe: LanguageKey.ArAe,
+  JaJp: LanguageKey.JaJp,
+  KoKr: LanguageKey.KoKr,
   ZhCn: LanguageKey.ZhCn,
   ZhHk: LanguageKey.ZhHk,
   AfZz: LanguageKey.AfZz,
