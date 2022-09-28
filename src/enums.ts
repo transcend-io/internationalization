@@ -118,7 +118,7 @@ export enum LanguageKey {
   NlNl = 'nl-NL',
   /** Dutch (Belgium) */
   NlBe = 'nl-BE',
-  /** Spanish (Castilian) */
+  /** Spanish (Castellano) */
   EsEs = 'es-ES',
   /** Spanish (Latin America & Caribbean) */
   Es419 = 'es-419',
