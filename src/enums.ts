@@ -6,13 +6,14 @@ import { makeEnum } from '@transcend-io/type-utils';
  * @see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
  */
 export enum LanguageKey {
-  // TODO: https://transcend.height.app/T-5873 - migrate these
   /** English */
   En = 'en',
   /** Arabic */
   Ar = 'ar',
   /** French */
   Fr = 'fr',
+  /** Spanish */
+  Es = 'es',
   /** German */
   De = 'de',
   /** Italian */
