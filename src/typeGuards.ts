@@ -1,11 +1,11 @@
-// type-utils
-import { createEnum } from '@transcend-io/type-utils';
-
 // local
 import { LanguageKey } from './enums';
 
 // The valid actions indexed by type
-const VALID_LOCALES = createEnum(Object.values(LanguageKey));
+const VALID_LOCALES: { [k in string]: LanguageKey } = {};
+Object.values(LanguageKey).forEach((value) => {
+  VALID_LOCALES[value] = value;
+});
 
 /**
  * Test if a string is a locale that we support
