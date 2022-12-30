@@ -1,6 +1,3 @@
-// type-utils
-import { apply } from '@transcend-io/type-utils';
-
 // local
 import { DefinedMessage } from './types';
 
@@ -42,9 +39,14 @@ export function defineMessages<TNames extends string>(
     [key in TNames]: Omit<DefinedMessage, 'id'>;
   },
 ): DefinedMessages<TNames> {
-  // Create the messages
-  return apply(messages, (value, key) => ({
-    ...value,
-    id: `${namespace}.${key}`,
-  }));
+  return Object.keys(messages).reduce(
+    (acc, key) =>
+      Object.assign(acc, {
+        [key]: {
+          ...messages[key as TNames],
+          id: `${namespace}.${key}`,
+        },
+      }),
+    {} as DefinedMessages<TNames>,
+  );
 }

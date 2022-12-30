@@ -1,5 +1,3 @@
-import { makeEnum } from '@transcend-io/type-utils';
-
 /**
  * The language identifier keys
  *
@@ -131,7 +129,7 @@ export enum LanguageKey {
   EnNz = 'en-NZ',
 }
 
-export const ConsentManagerLanguageKey = makeEnum({
+export const ConsentManagerLanguageKey = {
   En: LanguageKey.En,
   FrFr: LanguageKey.FrFr,
   DeDe: LanguageKey.DeDe,
@@ -170,7 +168,7 @@ export const ConsentManagerLanguageKey = makeEnum({
   ViVn: LanguageKey.ViVn,
   NlNl: LanguageKey.NlNl,
   HeIl: LanguageKey.HeIl,
-});
+} as const;
 
 /**
  * Override type
