@@ -127,6 +127,18 @@ export enum LanguageKey {
   HeIl = 'he-IL',
   /** English (New Zealand) */
   EnNz = 'en-NZ',
+  /** Estonian (Estonia) */
+  EtEe = 'et-EE',
+  /** Icelandic (Iceland) */
+  IsIs = 'is-IS',
+  /** Latvian (Latvia) */
+  LvLv = 'lv-LV',
+  /** Maltese (Malta) */
+  MtMt = 'mt-MT',
+  /** Slovak (Slovakia) */
+  SkSk = 'sk-SK',
+  /** Slovenian (Slovenia) */
+  SlSl = 'sl-SL',
 }
 
 export const ConsentManagerLanguageKey = {
