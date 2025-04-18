@@ -289,7 +289,8 @@ export const LOCALE_KEY = {
 /** Union of all locale keys */
 export type LocaleKey = keyof typeof LOCALE_KEY;
 /** Union of all locale enum values */
-export type LocaleValue = (typeof LOCALE_KEY)[LocaleKey];
+export type LocaleValue =
+  (typeof LOCALE_KEY)[LocaleKey];
 
 /**
  * List of AWS supported translations, see: https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html#what-is-languages-supported
@@ -375,7 +376,8 @@ export const AWS_SUPPORTED_TRANSLATIONS = {
 /** Union of all AWS translation keys  */
 type AwsTranslationKey = keyof typeof AWS_SUPPORTED_TRANSLATIONS;
 /** Union of all AWS translation enum values */
-type AwsTranslationValue = (typeof AWS_SUPPORTED_TRANSLATIONS)[AwsTranslationKey];
+type AwsTranslationValue =
+  (typeof AWS_SUPPORTED_TRANSLATIONS)[AwsTranslationKey];
 
 /** These are the languages we could translate with AWS but don't currently */
 const TRANSCEND_UNSUPPORTED_TRANSLATIONS = [
@@ -412,7 +414,7 @@ const TRANSCEND_UNSUPPORTED_TRANSLATIONS = [
 
 /** Union of Transcend unsupported language keys */
 export type TranscendUnsupportedTranslationKey =
-  typeof TRANSCEND_UNSUPPORTED_TRANSLATIONS[number];
+  (typeof TRANSCEND_UNSUPPORTED_TRANSLATIONS)[number];
 /** Union of Transcend unsupported language enum values */
 export type TranscendUnsupportedTranslationValue =
   (typeof AWS_SUPPORTED_TRANSLATIONS)[TranscendUnsupportedTranslationKey];
@@ -433,7 +435,6 @@ export const TRANSCEND_SUPPORTED_TRANSLATIONS = Object.fromEntries(
     ([, val]) => !(val in TRANSCEND_UNSUPPORTED_TRANSLATIONS),
   ),
 ) as Pick<typeof AWS_SUPPORTED_TRANSLATIONS, TranscendSupportedTranslationKey>;
-
 
 /**
  * TODO:
@@ -549,9 +550,10 @@ const CONSENT_MANAGER_UNSUPPORTED_LOCALES = [
 
 /** Union of Consent Manager unsupported locale keys */
 export type ConsentManagerUnsupportedTranslationKey =
-  typeof CONSENT_MANAGER_UNSUPPORTED_LOCALES[number];
+  (typeof CONSENT_MANAGER_UNSUPPORTED_LOCALES)[number];
 /** Union of Consent Manager unsupported locale enum values */
 export type ConsentManagerUnsupportedTranslationValue =
+
   (typeof LOCALE_KEY)[ConsentManagerUnsupportedTranslationKey];
 
 /** Union of Consent Manager supported locale keys */
@@ -570,7 +572,6 @@ export const CONSENT_MANAGER_SUPPORTED_LOCALES = Object.fromEntries(
     ([key]) => !(key in CONSENT_MANAGER_UNSUPPORTED_LOCALES),
   ),
 ) as Pick<typeof LOCALE_KEY, ConsentManagerSupportedTranslationKey>;
-
 
 // TODO: Remove old object here once dependencies are switched to CONSENT_MANAGER_SUPPORTED_LOCALES
 export const ConsentManagerLanguageKey = {
@@ -618,7 +619,7 @@ export const ConsentManagerLanguageKey = {
  * Override type
  */
 export type ConsentManagerLanguageKey =
-  typeof ConsentManagerLanguageKey[keyof typeof ConsentManagerLanguageKey];
+  (typeof ConsentManagerLanguageKey)[keyof typeof ConsentManagerLanguageKey];
 
 /**
  * List of BCP 47 language codes, grabbed from https://www.localeplanet.com/icu/
@@ -1349,5 +1350,5 @@ export const LOCALE_BROWSER_MAP = {
   zh_Hant_TW: LOCALE_KEY.ZhHk, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
   zu: LOCALE_KEY.ZuZa, // Zulu isiZulu
   zu_ZA: LOCALE_KEY.ZuZa, // Zulu (South Africa) isiZulu (iNingizimu Afrika)
-} as const
+} as const;
 /* eslint-enable max-lines */
