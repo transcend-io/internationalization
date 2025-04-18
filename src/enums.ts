@@ -552,7 +552,6 @@ export type ConsentManagerUnsupportedTranslationKey =
   (typeof CONSENT_MANAGER_UNSUPPORTED_LOCALES)[number];
 /** Union of Consent Manager unsupported locale enum values */
 export type ConsentManagerUnsupportedTranslationValue =
-
   (typeof LOCALE_KEY)[ConsentManagerUnsupportedTranslationKey];
 
 /** Union of Consent Manager supported locale keys */
