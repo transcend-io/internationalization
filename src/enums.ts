@@ -289,8 +289,7 @@ export const LOCALE_KEY = {
 /** Union of all locale keys */
 export type LocaleKey = keyof typeof LOCALE_KEY;
 /** Union of all locale enum values */
-export type LocaleValue =
-  (typeof LOCALE_KEY)[LocaleKey];
+export type LocaleValue = (typeof LOCALE_KEY)[LocaleKey];
 
 /**
  * List of AWS supported translations, see: https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html#what-is-languages-supported
