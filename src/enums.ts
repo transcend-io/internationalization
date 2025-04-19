@@ -851,7 +851,7 @@ export const LOCALE_BROWSER_MAP = {
   en_UG: LOCALE_KEY.En, // English (Uganda) English (Uganda)
   en_UM: LOCALE_KEY.En, // English (U.S. Outlying Islands) English (U.S. Outlying Islands)
   en_US: LOCALE_KEY.EnUs, // English (United States) English (United States) American English
-  en_US_POSIX: LOCALE_KEY.EnUs, // English (United States, Computer) English (United States, Computer) American English (Computer)
+  en_US_POSIX: LOCALE_KEY.EnUs, // English (United States, Computer) American English (Computer)
   en_VC: LOCALE_KEY.En, // English (St. Vincent & Grenadines) English (St. Vincent & Grenadines)
   en_VG: LOCALE_KEY.En, // English (British Virgin Islands) English (British Virgin Islands)
   en_VI: LOCALE_KEY.En, // English (U.S. Virgin Islands) English (U.S. Virgin Islands)
@@ -1339,12 +1339,12 @@ export const LOCALE_BROWSER_MAP = {
   zh: LOCALE_KEY.ZhCn, // Chinese 中文
   zh_Hans: LOCALE_KEY.ZhCn, // Chinese (Simplified) 中文（简体） Simplified Chinese
   zh_Hans_CN: LOCALE_KEY.ZhCn, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
-  zh_Hans_HK: LOCALE_KEY.ZhCn, // Chinese (Simplified, Hong Kong SAR China) 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
+  zh_Hans_HK: LOCALE_KEY.ZhCn, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
   zh_Hans_MO: LOCALE_KEY.ZhCn, // Chinese (Simplified, Macau SAR China) 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
   zh_Hans_SG: LOCALE_KEY.ZhCn, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
   zh_Hant: LOCALE_KEY.ZhHk, // Chinese (Traditional) 中文（繁體） Traditional Chinese
-  zh_Hant_HK: LOCALE_KEY.ZhHk, // Chinese (Traditional, Hong Kong SAR China) 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
-  zh_Hant_MO: LOCALE_KEY.ZhHk, // Chinese (Traditional, Macau SAR China) 中文（繁體字，中國澳門特別行政區） Traditional Chinese (Macau SAR China)
+  zh_Hant_HK: LOCALE_KEY.ZhHk, // 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
+  zh_Hant_MO: LOCALE_KEY.ZhHk, // 中文（繁體字，中國澳門特別行政區） Traditional Chinese (Macau SAR China)
   zh_Hant_TW: LOCALE_KEY.ZhHk, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
   zu: LOCALE_KEY.ZuZa, // Zulu isiZulu
   zu_ZA: LOCALE_KEY.ZuZa, // Zulu (South Africa) isiZulu (iNingizimu Afrika)
