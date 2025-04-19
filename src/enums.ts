@@ -1348,5 +1348,5 @@ export const LOCALE_BROWSER_MAP = {
   zh_Hant_TW: LOCALE_KEY.ZhHk, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
   zu: LOCALE_KEY.ZuZa, // Zulu isiZulu
   zu_ZA: LOCALE_KEY.ZuZa, // Zulu (South Africa) isiZulu (iNingizimu Afrika)
-} as const; // comment
+} as const;
 /* eslint-enable max-lines */
