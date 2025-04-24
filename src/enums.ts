@@ -626,7 +626,7 @@ export type ConsentManagerLanguageKey =
  * all other comments are to leave in those browser codes in case AWS updates to support them
  */
 export const LOCALE_BROWSER_MAP = {
-  'af': LOCALE_KEY.AfZz, // Afrikaans Afrikaans
+  af: LOCALE_KEY.AfZz, // Afrikaans Afrikaans
   'af-NA': LOCALE_KEY.AfZz, // Afrikaans (Namibia) Afrikaans (Namibië)
   'af-ZA': LOCALE_KEY.AfZz, // Afrikaans (South Africa) Afrikaans (Suid-Afrika)
   // 'agq', // Aghem Aghem
@@ -635,7 +635,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'ak-GH', // Akan (Ghana) Akan (Gaana)
   // 'am', // Amharic አማርኛ TODO
   // 'am-ET', // Amharic (Ethiopia) አማርኛ (ኢትዮጵያ) TODO
-  'ar': LOCALE_KEY.Ar, // Arabic العربية
+  ar: LOCALE_KEY.Ar, // Arabic العربية
   'ar-001': LOCALE_KEY.Ar, // Arabic (World) العربية (العالم) Modern Standard Arabic
   'ar-AE': LOCALE_KEY.ArAe, // Arabic (United Arab Emirates) العربية (الإمارات العربية المتحدة)
   'ar-BH': LOCALE_KEY.Ar, // Arabic (Bahrain) العربية (البحرين)
@@ -683,7 +683,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'bem-ZM', // Bemba (Zambia) Ichibemba (Zambia)
   // 'bez', // Bena Hibena
   // 'bez-TZ', // Bena (Tanzania) Hibena (Hutanzania)
-  'bg': LOCALE_KEY.BgBg, // Bulgarian български
+  bg: LOCALE_KEY.BgBg, // Bulgarian български
   'bg-BG': LOCALE_KEY.BgBg, // Bulgarian (Bulgaria) български (България)
   // 'bm', // Bambara bamanakan
   // 'bm-ML', // Bambara (Mali) bamanakan (Mali)
@@ -719,16 +719,16 @@ export const LOCALE_BROWSER_MAP = {
   // 'ckb', // Central Kurdish کوردیی ناوەندی
   // 'ckb-IQ', // Central Kurdish (Iraq) کوردیی ناوەندی (عێراق)
   // 'ckb-IR', // Central Kurdish (Iran) کوردیی ناوەندی (ئێران)
-  'cs': LOCALE_KEY.CsCz, // Czech čeština
+  cs: LOCALE_KEY.CsCz, // Czech čeština
   'cs-CZ': LOCALE_KEY.CsCz, // Czech (Czechia) čeština (Česko)
   // 'cy', // Welsh Cymraeg TODO
   // 'cy-GB', // Welsh (United Kingdom) Cymraeg (Y Deyrnas Unedig) TODO
-  'da': LOCALE_KEY.DaDk, // Danish dansk
+  da: LOCALE_KEY.DaDk, // Danish dansk
   'da-DK': LOCALE_KEY.DaDk, // Danish (Denmark) dansk (Danmark)
   'da-GL': LOCALE_KEY.DaDk, // Danish (Greenland) dansk (Grønland)
   // 'dav', // Taita Kitaita
   // 'dav-KE', // Taita (Kenya) Kitaita (Kenya)
-  'de': LOCALE_KEY.De, // German Deutsch
+  de: LOCALE_KEY.De, // German Deutsch
   'de-AT': LOCALE_KEY.DeAt, // German (Austria) Deutsch (Österreich) Austrian German
   'de-BE': LOCALE_KEY.De, // German (Belgium) Deutsch (Belgien)
   'de-CH': LOCALE_KEY.DeCh, // German (Switzerland) Deutsch (Schweiz) Swiss High German
@@ -751,10 +751,10 @@ export const LOCALE_BROWSER_MAP = {
   // 'ee', // Ewe Eʋegbe
   // 'ee-GH', // Ewe (Ghana) Eʋegbe (Ghana nutome)
   // 'ee-TG', // Ewe (Togo) Eʋegbe (Togo nutome)
-  'el': LOCALE_KEY.ElGr, // Greek Ελληνικά
+  el: LOCALE_KEY.ElGr, // Greek Ελληνικά
   'el-CY': LOCALE_KEY.ElGr, // Greek (Cyprus) Ελληνικά (Κύπρος)
   'el-GR': LOCALE_KEY.ElGr, // Greek (Greece) Ελληνικά (Ελλάδα)
-  'en': LOCALE_KEY.En, // English English
+  en: LOCALE_KEY.En, // English English
   'en-001': LOCALE_KEY.En, // English (World) English (World)
   'en-150': LOCALE_KEY.En, // English (Europe) English (Europe)
   'en-AG': LOCALE_KEY.En, // English (Antigua & Barbuda) English (Antigua & Barbuda)
@@ -861,7 +861,7 @@ export const LOCALE_BROWSER_MAP = {
   'en-ZM': LOCALE_KEY.En, // English (Zambia) English (Zambia)
   'en-ZW': LOCALE_KEY.En, // English (Zimbabwe) English (Zimbabwe)
   // 'eo', // Esperanto esperanto
-  'es': LOCALE_KEY.Es, // Spanish español
+  es: LOCALE_KEY.Es, // Spanish español
   'es-419': LOCALE_KEY.Es419, // Spanish (Latin America) español (Latinoamérica) Latin American Spanish
   'es-AR': LOCALE_KEY.Es419, // Spanish (Argentina) español (Argentina)
   'es-BO': LOCALE_KEY.Es419, // Spanish (Bolivia) español (Bolivia)
@@ -890,7 +890,7 @@ export const LOCALE_BROWSER_MAP = {
   'es-US': LOCALE_KEY.Es419, // Spanish (United States) español (Estados Unidos)
   'es-UY': LOCALE_KEY.Es419, // Spanish (Uruguay) español (Uruguay)
   'es-VE': LOCALE_KEY.Es419, // Spanish (Venezuela) español (Venezuela)
-  'et': LOCALE_KEY.EtEe, // Estonian eesti
+  et: LOCALE_KEY.EtEe, // Estonian eesti
   'et-EE': LOCALE_KEY.EtEe, // Estonian (Estonia) eesti (Eesti)
   // 'eu', // Basque euskara
   // 'eu-ES', // Basque (Spain) euskara (Espainia)
@@ -904,14 +904,14 @@ export const LOCALE_BROWSER_MAP = {
   // 'ff-GN', // Fulah (Guinea) Pulaar (Gine)
   // 'ff-MR', // Fulah (Mauritania) Pulaar (Muritani)
   // 'ff-SN', // Fulah (Senegal) Pulaar (Senegaal)
-  'fi': LOCALE_KEY.FiFi, // Finnish suomi
+  fi: LOCALE_KEY.FiFi, // Finnish suomi
   'fi-FI': LOCALE_KEY.FiFi, // Finnish (Finland) suomi (Suomi)
   // 'fil', // Filipino Filipino TODO
   // 'fil-PH', // Filipino (Philippines) Filipino (Pilipinas) TODO
   // 'fo', // Faroese føroyskt
   // 'fo-DK', // Faroese (Denmark) føroyskt (Danmark)
   // 'fo-FO', // Faroese (Faroe Islands) føroyskt (Føroyar)
-  'fr': LOCALE_KEY.Fr, // French français
+  fr: LOCALE_KEY.Fr, // French français
   'fr-BE': LOCALE_KEY.FrBe, // French (Belgium) français (Belgique)
   'fr-BF': LOCALE_KEY.Fr, // French (Burkina Faso) français (Burkina Faso)
   'fr-BI': LOCALE_KEY.Fr, // French (Burundi) français (Burundi)
@@ -968,7 +968,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'gd-GB', // Scottish Gaelic (United Kingdom) Gàidhlig (An Rìoghachd Aonaichte)
   // 'gl', // Galician galego
   // 'gl-ES', // Galician (Spain) galego (España)
-  'gsw': LOCALE_KEY.DeCh, // Swiss German Schwiizertüütsch
+  gsw: LOCALE_KEY.DeCh, // Swiss German Schwiizertüütsch
   'gsw-CH': LOCALE_KEY.DeCh, // Swiss German (Switzerland) Schwiizertüütsch (Schwiiz)
   'gsw-FR': LOCALE_KEY.DeCh, // Swiss German (France) Schwiizertüütsch (Frankriich)
   'gsw-LI': LOCALE_KEY.DeCh, // Swiss German (Liechtenstein) Schwiizertüütsch (Liächteschtäi)
@@ -984,33 +984,33 @@ export const LOCALE_BROWSER_MAP = {
   // 'ha-NG', // Hausa (Nigeria) Hausa (Najeriya) TODO
   // 'haw', // Hawaiian ʻŌlelo Hawaiʻi
   // 'haw-US', // Hawaiian (United States) ʻŌlelo Hawaiʻi (ʻAmelika Hui Pū ʻIa)
-  'he': LOCALE_KEY.HeIl, // Hebrew עברית
+  he: LOCALE_KEY.HeIl, // Hebrew עברית
   'he-IL': LOCALE_KEY.HeIl, // Hebrew (Israel) עברית (ישראל)
-  'hi': LOCALE_KEY.HiIn, // Hindi हिन्दी
+  hi: LOCALE_KEY.HiIn, // Hindi हिन्दी
   'hi-IN': LOCALE_KEY.HiIn, // Hindi (India) हिन्दी (भारत)
-  'hr': LOCALE_KEY.HrHr, // Croatian hrvatski
+  hr: LOCALE_KEY.HrHr, // Croatian hrvatski
   'hr-BA': LOCALE_KEY.HrHr, // Croatian (Bosnia & Herzegovina) hrvatski (Bosna i Hercegovina)
   'hr-HR': LOCALE_KEY.HrHr, // Croatian (Croatia) hrvatski (Hrvatska)
   // 'hsb', // Upper Sorbian hornjoserbšćina
   // 'hsb-DE', // Upper Sorbian (Germany) hornjoserbšćina (Němska)
-  'hu': LOCALE_KEY.HuHu, // Hungarian magyar
+  hu: LOCALE_KEY.HuHu, // Hungarian magyar
   'hu-HU': LOCALE_KEY.HuHu, // Hungarian (Hungary) magyar (Magyarország)
   // 'hy', // Armenian հայերեն TODO
   // 'hy-AM', // Armenian (Armenia) հայերեն (Հայաստան) TODO
-  'id': LOCALE_KEY.IdId, // Indonesian Indonesia
+  id: LOCALE_KEY.IdId, // Indonesian Indonesia
   'id-ID': LOCALE_KEY.IdId, // Indonesian (Indonesia) Indonesia (Indonesia)
   // 'ig', // Igbo Igbo
   // 'ig-NG', // Igbo (Nigeria) Igbo (Naịjịrịa)
   // 'ii', // Sichuan Yi ꆈꌠꉙ
   // 'ii-CN', // Sichuan Yi (China) ꆈꌠꉙ (ꍏꇩ)
-  'is': LOCALE_KEY.IsIs, // Icelandic íslenska
+  is: LOCALE_KEY.IsIs, // Icelandic íslenska
   'is-IS': LOCALE_KEY.IsIs, // Icelandic (Iceland) íslenska (Ísland)
-  'it': LOCALE_KEY.It, // Italian italiano
+  it: LOCALE_KEY.It, // Italian italiano
   'it-CH': LOCALE_KEY.ItCh, // Italian (Switzerland) italiano (Svizzera)
   'it-IT': LOCALE_KEY.ItIt, // Italian (Italy) italiano (Italia)
   'it-SM': LOCALE_KEY.ItIt, // Italian (San Marino) italiano (San Marino)
   'it-VA': LOCALE_KEY.ItIt, // Italian (Vatican City) italiano (Città del Vaticano)
-  'ja': LOCALE_KEY.Ja, // Japanese 日本語
+  ja: LOCALE_KEY.Ja, // Japanese 日本語
   'ja-JP': LOCALE_KEY.JaJp, // Japanese (Japan) 日本語 (日本)
   // 'jgo', // Ngomba Ndaꞌa
   // 'jgo-CM', // Ngomba (Cameroon) Ndaꞌa (Kamɛlûn)
@@ -1042,7 +1042,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'km-KH', // Khmer (Cambodia) ខ្មែរ (កម្ពុជា)
   // 'kn', // Kannada ಕನ್ನಡ TODO
   // 'kn-IN', // Kannada (India) ಕನ್ನಡ (ಭಾರತ) TODO
-  'ko': LOCALE_KEY.KoKr, // Korean 한국어
+  ko: LOCALE_KEY.KoKr, // Korean 한국어
   'ko-KP': LOCALE_KEY.KoKr, // Korean (North Korea) 한국어(조선민주주의인민공화국)
   'ko-KR': LOCALE_KEY.KoKr, // Korean (South Korea) 한국어(대한민국)
   // 'kok', // Konkani कोंकणी
@@ -1077,7 +1077,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'lrc', // Northern Luri لۊری شومالی
   // 'lrc-IQ', // Northern Luri (Iraq) لۊری شومالی (IQ)
   // 'lrc-IR', // Northern Luri (Iran) لۊری شومالی (IR)
-  'lt': LOCALE_KEY.LtLt, // Lithuanian lietuvių
+  lt: LOCALE_KEY.LtLt, // Lithuanian lietuvių
   'lt-LT': LOCALE_KEY.LtLt, // Lithuanian (Lithuania) lietuvių (Lietuva)
   // 'lu', // Luba-Katanga Tshiluba
   // 'lu-CD', // Luba-Katanga (Congo - Kinshasa) Tshiluba (Ditunga wa Kongu)
@@ -1085,7 +1085,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'luo-KE', // Luo (Kenya) Dholuo (Kenya)
   // 'luy', // Luyia Luluhia
   // 'luy-KE', // Luyia (Kenya) Luluhia (Kenya)
-  'lv': LOCALE_KEY.LvLv, // Latvian latviešu
+  lv: LOCALE_KEY.LvLv, // Latvian latviešu
   'lv-LV': LOCALE_KEY.LvLv, // Latvian (Latvia) latviešu (Latvija)
   // 'mas', // Masai Maa
   // 'mas-KE', // Masai (Kenya) Maa (Kenya)
@@ -1106,13 +1106,13 @@ export const LOCALE_BROWSER_MAP = {
   // 'ml-IN', // Malayalam (India) മലയാളം (ഇന്ത്യ)
   // 'mn', // Mongolian монгол TODO
   // 'mn-MN', // Mongolian (Mongolia) монгол (Монгол) TODO
-  'mr': LOCALE_KEY.MrIn, // Marathi मराठी
+  mr: LOCALE_KEY.MrIn, // Marathi मराठी
   'mr-IN': LOCALE_KEY.MrIn, // Marathi (India) मराठी (भारत)
-  'ms': LOCALE_KEY.MsMy, // Malay Melayu
+  ms: LOCALE_KEY.MsMy, // Malay Melayu
   'ms-BN': LOCALE_KEY.MsMy, // Malay (Brunei) Melayu (Brunei)
   'ms-MY': LOCALE_KEY.MsMy, // Malay (Malaysia) Melayu (Malaysia)
   'ms-SG': LOCALE_KEY.MsMy, // Malay (Singapore) Melayu (Singapura)
-  'mt': LOCALE_KEY.MtMt, // Maltese Malti
+  mt: LOCALE_KEY.MtMt, // Maltese Malti
   'mt-MT': LOCALE_KEY.MtMt, // Maltese (Malta) Malti (Malta)
   // 'mua', // Mundang MUNDAŊ
   // 'mua-CM', // Mundang (Cameroon) MUNDAŊ (kameruŋ)
@@ -1122,7 +1122,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'mzn-IR', // Mazanderani (Iran) مازرونی (ایران)
   // 'naq', // Nama Khoekhoegowab
   // 'naq-NA', // Nama (Namibia) Khoekhoegowab (Namibiab)
-  'nb': LOCALE_KEY.NbNi, // Norwegian Bokmål norsk bokmål
+  nb: LOCALE_KEY.NbNi, // Norwegian Bokmål norsk bokmål
   'nb-NO': LOCALE_KEY.NbNi, // Norwegian Bokmål (Norway) norsk bokmål (Norge)
   'nb-SJ': LOCALE_KEY.NbNi, // Norwegian Bokmål (Svalbard & Jan Mayen) norsk bokmål (Svalbard og Jan Mayen)
   // 'nd', // North Ndebele isiNdebele
@@ -1133,7 +1133,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'ne', // Nepali नेपाली
   // 'ne-IN', // Nepali (India) नेपाली (भारत)
   // 'ne-NP', // Nepali (Nepal) नेपाली (नेपाल)
-  'nl': LOCALE_KEY.NlNl, // Dutch Nederlands
+  nl: LOCALE_KEY.NlNl, // Dutch Nederlands
   'nl-AW': LOCALE_KEY.NlNl, // Dutch (Aruba) Nederlands (Aruba)
   'nl-BE': LOCALE_KEY.NlBe, // Dutch (Belgium) Nederlands (België) Flemish
   'nl-BQ': LOCALE_KEY.NlNl, // Dutch (Caribbean Netherlands) Nederlands (Caribisch Nederland)
@@ -1164,11 +1164,11 @@ export const LOCALE_BROWSER_MAP = {
   // 'pa-Arab-PK', // Punjabi (Arabic, Pakistan) پنجابی (عربی, پاکستان) TODO
   // 'pa-Guru', // Punjabi (Gurmukhi) ਪੰਜਾਬੀ (ਗੁਰਮੁਖੀ) TODO
   // 'pa-Guru-IN', // Punjabi (Gurmukhi, India) ਪੰਜਾਬੀ (ਗੁਰਮੁਖੀ, ਭਾਰਤ) TODO
-  'pl': LOCALE_KEY.PlPl, // Polish polski
+  pl: LOCALE_KEY.PlPl, // Polish polski
   'pl-PL': LOCALE_KEY.PlPl, // Polish (Poland) polski (Polska)
   // 'ps', // Pashto پښتو TODO
   // 'ps-AF', // Pashto (Afghanistan) پښتو (افغانستان) TODO
-  'pt': LOCALE_KEY.PtPt, // Portuguese português
+  pt: LOCALE_KEY.PtPt, // Portuguese português
   'pt-AO': LOCALE_KEY.PtPt, // Portuguese (Angola) português (Angola)
   'pt-BR': LOCALE_KEY.PtBr, // Portuguese (Brazil) português (Brasil) Brazilian Portuguese
   'pt-CH': LOCALE_KEY.PtPt, // Portuguese (Switzerland) português (Suíça)
@@ -1189,12 +1189,12 @@ export const LOCALE_BROWSER_MAP = {
   // 'rm-CH', // Romansh (Switzerland) rumantsch (Svizra)
   // 'rn', // Rundi Ikirundi
   // 'rn-BI', // Rundi (Burundi) Ikirundi (Uburundi)
-  'ro': LOCALE_KEY.RoRo, // Romanian română
+  ro: LOCALE_KEY.RoRo, // Romanian română
   'ro-MD': LOCALE_KEY.RoRo, // Romanian (Moldova) română (Republica Moldova) Moldavian
   'ro-RO': LOCALE_KEY.RoRo, // Romanian (Romania) română (România)
   // 'rof', // Rombo Kihorombo
   // 'rof-TZ', // Rombo (Tanzania) Kihorombo (Tanzania)
-  'ru': LOCALE_KEY.Ru, // Russian русский
+  ru: LOCALE_KEY.Ru, // Russian русский
   'ru-BY': LOCALE_KEY.Ru, // Russian (Belarus) русский (Беларусь)
   'ru-KG': LOCALE_KEY.Ru, // Russian (Kyrgyzstan) русский (Киргизия)
   'ru-KZ': LOCALE_KEY.Ru, // Russian (Kazakhstan) русский (Казахстан)
@@ -1228,9 +1228,9 @@ export const LOCALE_BROWSER_MAP = {
   // 'shi-Tfng-MA', // Tachelhit (Tifinagh, Morocco) ⵜⴰⵛⵍⵃⵉⵜ (Tfng, ⵍⵎⵖⵔⵉⴱ)
   // 'si', // Sinhala සිංහල
   // 'si-LK', // Sinhala (Sri Lanka) සිංහල (ශ්‍රී ලංකාව)
-  'sk': LOCALE_KEY.SkSk, // Slovak slovenčina
+  sk: LOCALE_KEY.SkSk, // Slovak slovenčina
   'sk-SK': LOCALE_KEY.SkSk, // Slovak (Slovakia) slovenčina (Slovensko)
-  'sl': LOCALE_KEY.SlSl, // Slovenian slovenščina
+  sl: LOCALE_KEY.SlSl, // Slovenian slovenščina
   'sl-SI': LOCALE_KEY.SlSl, // Slovenian (Slovenia) slovenščina (Slovenija)
   // 'smn', // Inari Sami anarâškielâ
   // 'smn-FI', // Inari Sami (Finland) anarâškielâ (Suomâ)
@@ -1245,7 +1245,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'sq-AL', // Albanian (Albania) shqip (Shqipëri) TODO
   // 'sq-MK', // Albanian (Macedonia) shqip (Maqedoni) TODO
   // 'sq-XK', // Albanian (Kosovo) shqip (Kosovë) TODO
-  'sr': LOCALE_KEY.SrLatnRs, // Serbian српски
+  sr: LOCALE_KEY.SrLatnRs, // Serbian српски
   // 'sr-Cyrl', // Serbian (Cyrillic) српски (ћирилица) TODO (latin or cyrillic?)
   // 'sr-Cyrl-BA', // Serbian (Cyrillic, Bosnia & Herzegovina) српски (ћирилица, Босна и Херцеговина) TODO (latin or cyrillic?)
   // 'sr-Cyrl-ME', // Serbian (Cyrillic, Montenegro) српски (ћирилица, Црна Гора) TODO (latin or cyrillic?)
@@ -1256,7 +1256,7 @@ export const LOCALE_BROWSER_MAP = {
   'sr-Latn-ME': LOCALE_KEY.SrLatnRs, // Serbian (Latin, Montenegro) srpski (latinica, Crna Gora)
   'sr-Latn-RS': LOCALE_KEY.SrLatnRs, // Serbian (Latin, Serbia) srpski (latinica, Srbija)
   'sr-Latn-XK': LOCALE_KEY.SrLatnRs, // Serbian (Latin, Kosovo) srpski (latinica, Kosovo)
-  'sv': LOCALE_KEY.SvSe, // Swedish svenska
+  sv: LOCALE_KEY.SvSe, // Swedish svenska
   'sv-AX': LOCALE_KEY.SvSe, // Swedish (Åland Islands) svenska (Åland)
   'sv-FI': LOCALE_KEY.SvSe, // Swedish (Finland) svenska (Finland)
   'sv-SE': LOCALE_KEY.SvSe, // Swedish (Sweden) svenska (Sverige)
@@ -1265,7 +1265,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'sw-KE', // Swahili (Kenya) Kiswahili (Kenya) TODO
   // 'sw-TZ', // Swahili (Tanzania) Kiswahili (Tanzania) TODO
   // 'sw-UG', // Swahili (Uganda) Kiswahili (Uganda) TODO
-  'ta': LOCALE_KEY.TaIn, // Tamil தமிழ்
+  ta: LOCALE_KEY.TaIn, // Tamil தமிழ்
   'ta-IN': LOCALE_KEY.TaIn, // Tamil (India) தமிழ் (இந்தியா)
   'ta-LK': LOCALE_KEY.TaIn, // Tamil (Sri Lanka) தமிழ் (இலங்கை)
   'ta-MY': LOCALE_KEY.TaIn, // Tamil (Malaysia) தமிழ் (மலேசியா)
@@ -1277,14 +1277,14 @@ export const LOCALE_BROWSER_MAP = {
   // 'teo-UG', // Teso (Uganda) Kiteso (Uganda)
   // 'tg', // Tajik тоҷикӣ
   // 'tg-TJ', // Tajik (Tajikistan) тоҷикӣ (Тоҷикистон)
-  'th': LOCALE_KEY.ThTh, // Thai ไทย
+  th: LOCALE_KEY.ThTh, // Thai ไทย
   'th-TH': LOCALE_KEY.ThTh, // Thai (Thailand) ไทย (ไทย)
   // 'ti', // Tigrinya ትግርኛ
   // 'ti-ER', // Tigrinya (Eritrea) ትግርኛ (ኤርትራ)
   // 'ti-ET', // Tigrinya (Ethiopia) ትግርኛ (ኢትዮጵያ)
   // 'to', // Tongan lea fakatonga
   // 'to-TO', // Tongan (Tonga) lea fakatonga (Tonga)
-  'tr': LOCALE_KEY.TrTr, // Turkish Türkçe
+  tr: LOCALE_KEY.TrTr, // Turkish Türkçe
   'tr-CY': LOCALE_KEY.TrTr, // Turkish (Cyprus) Türkçe (Kıbrıs)
   'tr-TR': LOCALE_KEY.TrTr, // Turkish (Turkey) Türkçe (Türkiye)
   // 'tt', // Tatar татар
@@ -1295,7 +1295,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'tzm-MA', // Central Atlas Tamazight (Morocco) Tamaziɣt n laṭlaṣ (Meṛṛuk)
   // 'ug', // Uyghur ئۇيغۇرچە
   // 'ug-CN', // Uyghur (China) ئۇيغۇرچە (جۇڭگو)
-  'uk': LOCALE_KEY.UkUa, // Ukrainian українська
+  uk: LOCALE_KEY.UkUa, // Ukrainian українська
   'uk-UA': LOCALE_KEY.UkUa, // Ukrainian (Ukraine) українська (Україна)
   // 'ur', // Urdu اردو TODO
   // 'ur-IN', // Urdu (India) اردو (بھارت) TODO
@@ -1312,7 +1312,7 @@ export const LOCALE_BROWSER_MAP = {
   // 'vai-Latn-LR', // Vai (Latin, Liberia) Vai (Latn, Laibhiya)
   // 'vai-Vaii', // Vai (Vai) ꕙꔤ (Vaii)
   // 'vai-Vaii-LR', // Vai (Vai, Liberia) ꕙꔤ (Vaii, ꕞꔤꔫꕩ)
-  'vi': LOCALE_KEY.ViVn, // Vietnamese Tiếng Việt
+  vi: LOCALE_KEY.ViVn, // Vietnamese Tiếng Việt
   'vi-VN': LOCALE_KEY.ViVn, // Vietnamese (Vietnam) Tiếng Việt (Việt Nam)
   // 'vun', // Vunjo Kyivunjo
   // 'vun-TZ', // Vunjo (Tanzania) Kyivunjo (Tanzania)
@@ -1329,14 +1329,14 @@ export const LOCALE_BROWSER_MAP = {
   // 'yo', // Yoruba Èdè Yorùbá
   // 'yo-BJ', // Yoruba (Benin) Èdè Yorùbá (Orílɛ́ède Bɛ̀nɛ̀)
   // 'yo-NG', // Yoruba (Nigeria) Èdè Yorùbá (Orílẹ́ède Nàìjíríà)
-  'yue': LOCALE_KEY.ZhHk, // Cantonese 粵語
+  yue: LOCALE_KEY.ZhHk, // Cantonese 粵語
   'yue-Hans': LOCALE_KEY.ZhCn, // Cantonese (Simplified) 粤语 (简体)
   'yue-Hans-CN': LOCALE_KEY.ZhCn, // Cantonese (Simplified, China) 粤语 (简体，中华人民共和国)
   'yue-Hant': LOCALE_KEY.ZhHk, // Cantonese (Traditional) 粵語 (繁體)
   'yue-Hant-HK': LOCALE_KEY.ZhHk, // Cantonese (Traditional, Hong Kong SAR China) 粵語 (繁體，中華人民共和國香港特別行政區)
   // 'zgh', // Standard Moroccan Tamazight ⵜⴰⵎⴰⵣⵉⵖⵜ
   // 'zgh-MA', // Standard Moroccan Tamazight (Morocco) ⵜⴰⵎⴰⵣⵉⵖⵜ (ⵍⵎⵖⵔⵉⴱ)
-  'zh': LOCALE_KEY.ZhCn, // Chinese 中文
+  zh: LOCALE_KEY.ZhCn, // Chinese 中文
   'zh-Hans': LOCALE_KEY.ZhCn, // Chinese (Simplified) 中文（简体） Simplified Chinese
   'zh-Hans-CN': LOCALE_KEY.ZhCn, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
   'zh-Hans-HK': LOCALE_KEY.ZhCn, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
@@ -1346,7 +1346,7 @@ export const LOCALE_BROWSER_MAP = {
   'zh-Hant-HK': LOCALE_KEY.ZhHk, // 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
   'zh-Hant-MO': LOCALE_KEY.ZhHk, // 中文（繁體字，中國澳門特別行政區） Traditional Chinese (Macau SAR China)
   'zh-Hant-TW': LOCALE_KEY.ZhHk, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
-  'zu': LOCALE_KEY.ZuZa, // Zulu isiZulu
+  zu: LOCALE_KEY.ZuZa, // Zulu isiZulu
   'zu-ZA': LOCALE_KEY.ZuZa, // Zulu (South Africa) isiZulu (iNingizimu Afrika)
 } as const satisfies Record<string, LocaleValue>;
 
