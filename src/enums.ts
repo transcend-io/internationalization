@@ -1340,7 +1340,7 @@ export const LOCALE_BROWSER_MAP = {
   'zh-Hans': LOCALE_KEY.ZhCn, // Chinese (Simplified) 中文（简体） Simplified Chinese
   'zh-Hans-CN': LOCALE_KEY.ZhCn, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
   'zh-Hans-HK': LOCALE_KEY.ZhCn, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
-  'zh-Hans-MO': LOCALE_KEY.ZhCn, // Chinese (Simplified, Macau SAR China) 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
+  'zh-Hans-MO': LOCALE_KEY.ZhCn, // 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
   'zh-Hans-SG': LOCALE_KEY.ZhCn, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
   'zh-Hant': LOCALE_KEY.ZhHk, // Chinese (Traditional) 中文（繁體） Traditional Chinese
   'zh-Hant-HK': LOCALE_KEY.ZhHk, // 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
