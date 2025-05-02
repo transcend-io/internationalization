@@ -540,7 +540,6 @@ const CONSENT_MANAGER_UNSUPPORTED_LOCALES = [
   'NlBe',
   'EnNz',
   'EtEe',
-  'IsIs',
   'LvLv',
   'MtMt',
   'SkSk',
