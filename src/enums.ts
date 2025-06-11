@@ -373,9 +373,9 @@ export const AWS_SUPPORTED_TRANSLATIONS = {
 } as const;
 
 /** Union of all AWS translation keys  */
-type AwsTranslationKey = keyof typeof AWS_SUPPORTED_TRANSLATIONS;
+export type AwsTranslationKey = keyof typeof AWS_SUPPORTED_TRANSLATIONS;
 /** Union of all AWS translation enum values */
-type AwsTranslationValue =
+export type AwsTranslationValue =
   (typeof AWS_SUPPORTED_TRANSLATIONS)[AwsTranslationKey];
 
 /** These are the languages we could translate with AWS but don't currently */
@@ -490,7 +490,7 @@ export const LOCALE_TRANSLATION_MAP = {
   [LOCALE_KEY.TrTr]: TRANSCEND_SUPPORTED_TRANSLATIONS.Turkish,
   [LOCALE_KEY.UkUa]: TRANSCEND_SUPPORTED_TRANSLATIONS.Ukrainian,
   [LOCALE_KEY.ViVn]: TRANSCEND_SUPPORTED_TRANSLATIONS.Vietnamese,
-  [LOCALE_KEY.ZuZa]: TRANSCEND_SUPPORTED_TRANSLATIONS.English, // TODO: this translation is just english?
+  [LOCALE_KEY.ZuZa]: TRANSCEND_SUPPORTED_TRANSLATIONS.English, // TODO: https://transcend.height.app/T-6386
   [LOCALE_KEY.EnUs]: TRANSCEND_SUPPORTED_TRANSLATIONS.English,
   [LOCALE_KEY.EnAu]: TRANSCEND_SUPPORTED_TRANSLATIONS.English,
   [LOCALE_KEY.FrBe]: TRANSCEND_SUPPORTED_TRANSLATIONS.French,
@@ -1351,4 +1351,146 @@ export const LOCALE_BROWSER_MAP = {
 
 /** Union of Browser locale keys */
 export type BrowserLocaleKey = keyof typeof LOCALE_BROWSER_MAP;
+
+/**
+ * Native language names, used to render options to users
+ * Language options for end-users should be written in own language
+ */
+export const NATIVE_LANGUAGE_NAMES = {
+  /* English */
+  [LOCALE_KEY.En]: 'English',
+  /* Arabic */
+  [LOCALE_KEY.Ar]: 'العربية',
+  /* French */
+  [LOCALE_KEY.Fr]: 'Français',
+  /* German */
+  [LOCALE_KEY.De]: 'Deutsch',
+  /* Spanish */
+  [LOCALE_KEY.Es]: 'Español',
+  /* Italian */
+  [LOCALE_KEY.It]: 'Italiano',
+  /* Japanese */
+  [LOCALE_KEY.Ja]: '日本語',
+  /* Russian */
+  [LOCALE_KEY.Ru]: 'Русский язык',
+  /* Arabic UAE */
+  [LOCALE_KEY.ArAe]: 'العربية (الإمارات العربية المتحدة)',
+  /* French */
+  [LOCALE_KEY.FrFr]: 'Français (France)',
+  /* German */
+  [LOCALE_KEY.DeDe]: 'Deutsch (Deutschland)',
+  /* Italian */
+  [LOCALE_KEY.ItIt]: 'Italiano (Italia)',
+  /* Afrikaans */
+  [LOCALE_KEY.AfZz]: 'Afrikaans',
+  /* Bulgarian */
+  [LOCALE_KEY.BgBg]: 'български',
+  /* Chinese Simplified */
+  [LOCALE_KEY.ZhCn]: '汉语',
+  /* Croatian */
+  [LOCALE_KEY.HrHr]: 'Hrvatski',
+  /* Czech */
+  [LOCALE_KEY.CsCz]: 'Čeština',
+  /* Danish */
+  [LOCALE_KEY.DaDk]: 'Dansk',
+  /* English (UK) */
+  [LOCALE_KEY.EnGb]: 'English (UK)',
+  /* English (Canada) */
+  [LOCALE_KEY.EnCa]: 'English (Canada)',
+  /* English (UAE) */
+  [LOCALE_KEY.EnAe]: 'English (UAE)',
+  /* Finnish */
+  [LOCALE_KEY.FiFi]: 'Suomi',
+  /* Greek */
+  [LOCALE_KEY.ElGr]: 'ελληνικά',
+  /* Hindi */
+  [LOCALE_KEY.HiIn]: 'हिन्दी',
+  /* Hungarian */
+  [LOCALE_KEY.HuHu]: 'Magyar',
+  /* Indonesian */
+  [LOCALE_KEY.IdId]: 'Bahasa Indonesia',
+  /* Japanese */
+  [LOCALE_KEY.JaJp]: '日本語',
+  /* Korean */
+  [LOCALE_KEY.KoKr]: '한국어',
+  /* Lithuanian */
+  [LOCALE_KEY.LtLt]: 'Lietuvių',
+  /* Malay */
+  [LOCALE_KEY.MsMy]: 'Bahasa Melayu',
+  /* Marathi */
+  [LOCALE_KEY.MrIn]: 'मराठी',
+  /* Norwegian Bokmål */
+  [LOCALE_KEY.NbNi]: 'Bokmål',
+  /* Polish */
+  [LOCALE_KEY.PlPl]: 'Polski',
+  /* Portuguese (Brazil) */
+  [LOCALE_KEY.PtBr]: 'Português (Brasil)',
+  /* Portuguese (Portugal) */
+  [LOCALE_KEY.PtPt]: 'Português (Portugal)',
+  /* Romanian */
+  [LOCALE_KEY.RoRo]: 'Română',
+  /* Russian */
+  [LOCALE_KEY.RuRu]: 'Русский язык',
+  /* Latn-Serbian (Latin) */
+  [LOCALE_KEY.SrLatnRs]: 'Srpski',
+  /* Swedish */
+  [LOCALE_KEY.SvSe]: 'Svenska',
+  /* Tamil */
+  [LOCALE_KEY.TaIn]: 'தமிழ்',
+  /* Thai */
+  [LOCALE_KEY.ThTh]: 'ภาษาไทย',
+  /* Turkish */
+  [LOCALE_KEY.TrTr]: 'Türkçe',
+  /* Ukrainian */
+  [LOCALE_KEY.UkUa]: 'українська мова',
+  /* Vietnamese */
+  [LOCALE_KEY.ViVn]: 'Tiếng Việt',
+  /* Zulu */
+  [LOCALE_KEY.ZuZa]: 'isiZulu',
+  /* USA */
+  [LOCALE_KEY.EnUs]: 'English (US)',
+  /* Australia */
+  [LOCALE_KEY.EnAu]: 'English (Australia)',
+  /* Belgium */
+  [LOCALE_KEY.FrBe]: 'Français (Belgique)',
+  /* Quebec */
+  [LOCALE_KEY.FrCa]: 'Français (Québec)',
+  /* Ireland */
+  [LOCALE_KEY.EnIe]: 'English (Ireland)',
+  /* Dutch */
+  [LOCALE_KEY.NlNl]: 'Nederlands',
+  /* Dutch (Belgium) */
+  [LOCALE_KEY.NlBe]: 'Nederlands (België)',
+  /* Spanish (Castilian) */
+  [LOCALE_KEY.EsEs]: 'Español (Castellano)',
+  /* Spanish (Latin America & Caribbean) */
+  [LOCALE_KEY.Es419]: 'Español (América Latina)',
+  /* Chinese (Traditional) */
+  [LOCALE_KEY.ZhHk]: '漢語',
+  /** Austrian German */
+  [LOCALE_KEY.DeAt]: 'Österreichisches Standarddeutsch,',
+  /** Swiss German */
+  [LOCALE_KEY.DeCh]: 'Schwiizerdütsch',
+  /** Swiss Italian */
+  [LOCALE_KEY.ItCh]: 'Dialetto Svizzero',
+  /** French (Switzerland) */
+  [LOCALE_KEY.FrCh]: 'Français de Suisse',
+  /** Hebrew (Israel) */
+  [LOCALE_KEY.HeIl]: 'עִבְרִית',
+  /* New Zealand */
+  [LOCALE_KEY.EnNz]: 'English (New Zealand)',
+  /** Estonian (Estonia) */
+  [LOCALE_KEY.EtEe]: 'Eesti',
+  /** Icelandic (Iceland) */
+  [LOCALE_KEY.IsIs]: 'Íslenska',
+  /** Latvian (Latvia) */
+  [LOCALE_KEY.LvLv]: 'Latviešu',
+  /** Maltese (Malta) */
+  [LOCALE_KEY.MtMt]: 'Malti',
+  /** Slovak (Slovakia) */
+  [LOCALE_KEY.SkSk]: 'Slovenčina',
+  /** Slovenian (Slovenia) */
+  [LOCALE_KEY.SlSl]: 'Slovenščina',
+} as const satisfies Record<LocaleValue, string>;
+
 /* eslint-enable max-lines */
