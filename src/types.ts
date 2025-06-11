@@ -1,21 +1,21 @@
 // local
-import type { LanguageKey } from './enums';
+import type { LocaleValue } from './enums';
 
 /**
- * Translations map from message id to translation
+ * Translations map from message id to translation string
  */
 export type TranslatedMessages = { [id in string]: string };
 
 /**
- * Message translations by language key
+ * Mapping of Transcend locale key to a message object
  */
-export type Translations = { [key in LanguageKey]: TranslatedMessages };
+export type Translations = { [key in LocaleValue]: TranslatedMessages };
 
 /**
- * Message translations plus an additional description file
+ * Mapping of Transcend locale key (or description) to a message object
  */
 export type TranslationsWithDescriptions = {
-  [key in LanguageKey | 'description']: TranslatedMessages;
+  [key in LocaleValue | 'description']: TranslatedMessages;
 };
 
 /**
