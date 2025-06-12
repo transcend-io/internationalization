@@ -431,7 +431,8 @@ export type TranscendSupportedTranslationValue = Exclude<
 
 export const TRANSCEND_SUPPORTED_TRANSLATIONS = Object.fromEntries(
   Object.entries(AWS_SUPPORTED_TRANSLATIONS).filter(
-    ([key]) => !(TRANSCEND_UNSUPPORTED_TRANSLATIONS as readonly string[]).includes(key),
+    ([key]) =>
+      !(TRANSCEND_UNSUPPORTED_TRANSLATIONS as readonly string[]).includes(key),
   ),
 ) as Pick<typeof AWS_SUPPORTED_TRANSLATIONS, TranscendSupportedTranslationKey>;
 
@@ -566,7 +567,8 @@ export type ConsentManagerSupportedTranslationValue = Exclude<
 
 export const CONSENT_MANAGER_SUPPORTED_LOCALES = Object.fromEntries(
   Object.entries(LOCALE_KEY).filter(
-    ([key]) => !(CONSENT_MANAGER_UNSUPPORTED_LOCALES as readonly string[]).includes(key),
+    ([key]) =>
+      !(CONSENT_MANAGER_UNSUPPORTED_LOCALES as readonly string[]).includes(key),
   ),
 ) as Pick<typeof LOCALE_KEY, ConsentManagerSupportedTranslationKey>;
 
