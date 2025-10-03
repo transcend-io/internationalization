@@ -110,7 +110,7 @@ export const LOCALE_KEY = {
   Dv: 'dv',
   /** Urdu */
   Ur: 'ur',
- /** Albanian */
+  /** Albanian */
   Sq: 'sq',
   /** Amharic */
   Am: 'am',
@@ -487,7 +487,7 @@ export type AwsTranslationValue =
   (typeof AWS_SUPPORTED_TRANSLATIONS)[AwsTranslationKey];
 
 /** Mapping of Locale to AWS Translation */
-export const LOCALE_TRANSLATION_MAP:  {
+export const LOCALE_TRANSLATION_MAP: {
   [k in LocaleValue]: AwsTranslationValue;
 } = {
   /* base (2-char) locales */
@@ -1834,7 +1834,7 @@ export const NATIVE_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.ViVn]: 'Tiếng Việt',
   /* Zulu */
   [LOCALE_KEY.ZuZa]: 'isiZulu',
-    /* English (US) */
+  /* English (US) */
   [LOCALE_KEY.EnUs]: 'English (US)',
   /* English (Australia) */
   [LOCALE_KEY.EnAu]: 'English (Australia)',
@@ -2032,6 +2032,5 @@ export const NATIVE_LANGUAGE_NAMES: Record<LocaleValue, string> = {
 
   /* Galician (Spain) */
   [LOCALE_KEY.GlEs]: 'Galego (España)',
-
 };
 /* eslint-enable max-lines */
