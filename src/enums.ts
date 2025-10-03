@@ -836,6 +836,10 @@ const CONSENT_MANAGER_UNSUPPORTED_LOCALES = [
   'SwTz',
   'SwUg',
   'SwCd',
+  'CaAd',
+  'CaFr',
+  'CaIt',
+  'GlEs',
 ] as const satisfies readonly LocaleKey[];
 
 /** Union of Consent Manager unsupported locale keys */
