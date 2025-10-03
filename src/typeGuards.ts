@@ -1,9 +1,8 @@
-// local
-import { LanguageKey } from './enums';
+import {  LocaleValue, LOCALE_KEY } from './enums';
 
 // The valid actions indexed by type
-const VALID_LOCALES: { [k in string]: LanguageKey } = {};
-Object.values(LanguageKey).forEach((value) => {
+const VALID_LOCALES: { [k in string]: LocaleValue } = {};
+Object.values(LOCALE_KEY).forEach((value) => {
   VALID_LOCALES[value] = value;
 });
 
@@ -15,6 +14,6 @@ Object.values(LanguageKey).forEach((value) => {
  */
 export function isKnownLocale(
   locale: string | string[] | boolean | undefined,
-): locale is LanguageKey {
+): locale is LocaleValue {
   return !!locale && typeof locale === 'string' && locale in VALID_LOCALES;
 }
