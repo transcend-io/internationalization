@@ -36,6 +36,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - run: yarn && yarn test
 
   run-depcheck:
@@ -46,6 +52,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 22.x
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - run: yarn pnpify depcheck
 
   run-pre-commits:
@@ -59,6 +71,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 22.x
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - uses: pre-commit/action@v3.0.1
         with:
           extra_args: --source ${{ github.event.pull_request.base.sha || 'HEAD~1' }} --origin ${{ github.event.pull_request.head.sha || 'HEAD' }}
@@ -77,6 +95,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '22.x'
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - name: Configure NPM authentication
         run: |
           yarn config set npmAlwaysAuth true
@@ -98,6 +122,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '22.x'
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 6
+          max_attempts: 3
+          retry_on: error
+          command: yarn install --immutable
       - name: Configure Github Packages authentication
         run: |
           yarn config set npmAlwaysAuth true
