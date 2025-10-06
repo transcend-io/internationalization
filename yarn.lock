@@ -339,7 +339,6 @@ __metadata:
     "@types/mocha": ^9.1.0
     "@typescript-eslint/eslint-plugin": ^5.12.1
     "@typescript-eslint/parser": ^5.12.1
-    "@yarnpkg/pnpify": ^3.1.1
     "@yarnpkg/sdks": ^2.6.0
     chai: ^4.3.6
     depcheck: ^1.4.3
@@ -789,16 +788,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/nm@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@yarnpkg/nm@npm:3.0.1"
-  dependencies:
-    "@yarnpkg/core": ^3.2.0
-    "@yarnpkg/fslib": ^2.6.1
-  checksum: bc39d07b4f2715bb114e3290d11cec71baadce2f2b4d0d0f3058eba154b62bf8a954fa57df4b9018dc5bdc12ab58e90822b6b67f8ed9fd13565b0b8acf56acd8
-  languageName: node
-  linkType: hard
-
 "@yarnpkg/parsers@npm:^2.5.0":
   version: 2.5.0
   resolution: "@yarnpkg/parsers@npm:2.5.0"
@@ -816,22 +805,6 @@ __metadata:
     "@types/node": ^13.7.0
     "@yarnpkg/fslib": ^2.6.1
   checksum: 5b99f89e774a0e98f6e86b9bdcd36eee4f9dc00b9b5983e8f6df95c3ecc196f5a030616edaaad7648f548d5b06fd7b201226e1205d64e61fe02657fea3860410
-  languageName: node
-  linkType: hard
-
-"@yarnpkg/pnpify@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@yarnpkg/pnpify@npm:3.1.1"
-  dependencies:
-    "@yarnpkg/core": ^3.2.0
-    "@yarnpkg/fslib": ^2.6.1
-    "@yarnpkg/nm": ^3.0.1
-    clipanion: ^3.2.0-rc.4
-    cross-spawn: 7.0.3
-    tslib: ^1.13.0
-  bin:
-    pnpify: ./lib/cli.js
-  checksum: 05a96f9299e77954a03ed9f69292d87416dd7a102a58b1ca9d245c6e7665c146e28054f79c8574172f0d94e94ba9295ae9fc15944be3883337e11508c1764eb2
   languageName: node
   linkType: hard
 

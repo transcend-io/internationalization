@@ -37,7 +37,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mocha", "npm:9.1.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:f42f973c9c1acba1155c4caa1fea1e311bc32aafa328606c255f23ec13665dd67ee8dd79b8e46a0183c97d1653dee359fc156f98d03eea57b4edb5ea13d2f4dc#npm:5.12.1"],\
             ["@typescript-eslint/parser", "virtual:f42f973c9c1acba1155c4caa1fea1e311bc32aafa328606c255f23ec13665dd67ee8dd79b8e46a0183c97d1653dee359fc156f98d03eea57b4edb5ea13d2f4dc#npm:5.12.1"],\
-            ["@yarnpkg/pnpify", "npm:3.1.1"],\
             ["@yarnpkg/sdks", "npm:2.6.0"],\
             ["chai", "npm:4.3.6"],\
             ["depcheck", "npm:1.4.3"],\
@@ -446,7 +445,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mocha", "npm:9.1.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:f42f973c9c1acba1155c4caa1fea1e311bc32aafa328606c255f23ec13665dd67ee8dd79b8e46a0183c97d1653dee359fc156f98d03eea57b4edb5ea13d2f4dc#npm:5.12.1"],\
             ["@typescript-eslint/parser", "virtual:f42f973c9c1acba1155c4caa1fea1e311bc32aafa328606c255f23ec13665dd67ee8dd79b8e46a0183c97d1653dee359fc156f98d03eea57b4edb5ea13d2f4dc#npm:5.12.1"],\
-            ["@yarnpkg/pnpify", "npm:3.1.1"],\
             ["@yarnpkg/sdks", "npm:2.6.0"],\
             ["chai", "npm:4.3.6"],\
             ["depcheck", "npm:1.4.3"],\
@@ -1032,17 +1030,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@yarnpkg/nm", [\
-        ["npm:3.0.1", {\
-          "packageLocation": "./.yarn/cache/@yarnpkg-nm-npm-3.0.1-f51363e8b2-bc39d07b4f.zip/node_modules/@yarnpkg/nm/",\
-          "packageDependencies": [\
-            ["@yarnpkg/nm", "npm:3.0.1"],\
-            ["@yarnpkg/core", "npm:3.2.0"],\
-            ["@yarnpkg/fslib", "npm:2.6.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@yarnpkg/parsers", [\
         ["npm:2.5.0", {\
           "packageLocation": "./.yarn/cache/@yarnpkg-parsers-npm-2.5.0-80778f9c50-02678b7b91.zip/node_modules/@yarnpkg/parsers/",\
@@ -1061,21 +1048,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnp", "npm:3.2.0"],\
             ["@types/node", "npm:13.13.52"],\
             ["@yarnpkg/fslib", "npm:2.6.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@yarnpkg/pnpify", [\
-        ["npm:3.1.1", {\
-          "packageLocation": "./.yarn/cache/@yarnpkg-pnpify-npm-3.1.1-b3d7d3145e-05a96f9299.zip/node_modules/@yarnpkg/pnpify/",\
-          "packageDependencies": [\
-            ["@yarnpkg/pnpify", "npm:3.1.1"],\
-            ["@yarnpkg/core", "npm:3.2.0"],\
-            ["@yarnpkg/fslib", "npm:2.6.1"],\
-            ["@yarnpkg/nm", "npm:3.0.1"],\
-            ["clipanion", "virtual:aa6dbc485c96a4f23035a31f44481412ab7479eee841cf5f30d392dce33e0547ef7dbed86b365514f32c7fc4d2d00670c7483fbe76a30ee4eead454cfc70e090#npm:3.2.0-rc.10"],\
-            ["cross-spawn", "npm:7.0.3"],\
-            ["tslib", "npm:1.14.1"]\
           ],\
           "linkType": "HARD"\
         }]\

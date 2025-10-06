@@ -58,7 +58,7 @@ jobs:
           max_attempts: 3
           retry_on: error
           command: yarn install --immutable
-      - run: yarn pnpify depcheck
+      - run: yarn depcheck
 
   run-pre-commits:
     runs-on: ubuntu-latest
