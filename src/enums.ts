@@ -47,7 +47,8 @@ export const LOCALE_KEY = {
   /** Hungarian */
   Hu: 'hu',
   /** Indonesian */
-  Id: 'id',
+  // TODO: https://linear.app/transcend/issue/GOOM-417/add-id-to-locale-key
+  // Id: 'id',
   /** Korean */
   Ko: 'ko',
   /** Lithuanian */
