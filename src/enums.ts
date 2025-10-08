@@ -510,7 +510,8 @@ export const LOCALE_TRANSLATION_MAP: {
   [LOCALE_KEY.El]: AWS_SUPPORTED_TRANSLATIONS.Greek,
   [LOCALE_KEY.Hi]: AWS_SUPPORTED_TRANSLATIONS.Hindi,
   [LOCALE_KEY.Hu]: AWS_SUPPORTED_TRANSLATIONS.Hungarian,
-  [LOCALE_KEY.Id]: AWS_SUPPORTED_TRANSLATIONS.Indonesian,
+  // TODO: https://linear.app/transcend/issue/GOOM-417/add-id-to-locale-key
+  // [LOCALE_KEY.Id]: AWS_SUPPORTED_TRANSLATIONS.Indonesian,
   [LOCALE_KEY.Ko]: AWS_SUPPORTED_TRANSLATIONS.Korean,
   [LOCALE_KEY.Lt]: AWS_SUPPORTED_TRANSLATIONS.Lithuanian,
   [LOCALE_KEY.Ms]: AWS_SUPPORTED_TRANSLATIONS.Malay,
@@ -1645,7 +1646,8 @@ export const NATIVE_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   /* Hungarian */
   [LOCALE_KEY.Hu]: 'Magyar',
   /* Indonesian */
-  [LOCALE_KEY.Id]: 'Bahasa Indonesia',
+  // TODO: https://linear.app/transcend/issue/GOOM-417/add-id-to-locale-key
+  // [LOCALE_KEY.Id]: 'Bahasa Indonesia',
   /* Korean */
   [LOCALE_KEY.Ko]: '한국어',
   /* Lithuanian */
@@ -2060,7 +2062,8 @@ export const EN_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.El]: 'Greek',
   [LOCALE_KEY.Hi]: 'Hindi',
   [LOCALE_KEY.Hu]: 'Hungarian',
-  [LOCALE_KEY.Id]: 'Indonesian',
+  // TODO: https://linear.app/transcend/issue/GOOM-417/add-id-to-locale-key
+  // [LOCALE_KEY.Id]: 'Indonesian',
   [LOCALE_KEY.Ko]: 'Korean',
   [LOCALE_KEY.Lt]: 'Lithuanian',
   [LOCALE_KEY.Ms]: 'Malay',
