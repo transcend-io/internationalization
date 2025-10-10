@@ -8,8 +8,6 @@ import {
 
 import {
   getLanguagesFromNavigator,
-  mapBrowserTagToLocale,
-  resolveSupportedLocaleForBrowserTag,
   getUserLocalesFromBrowserLanguages,
   getNearestSupportedLocale,
   sortSupportedLocalesByPreference,
@@ -41,81 +39,6 @@ describe('locale-helpers', () => {
     });
   });
 
-  describe('mapBrowserTagToLocale (case-insensitive + base fallback)', () => {
-    it('maps exact tags regardless of case', () => {
-      expect(mapBrowserTagToLocale('fr-CA')).to.equal(LOCALE_KEY.FrCa);
-      expect(mapBrowserTagToLocale('FR-ca')).to.equal(LOCALE_KEY.FrCa);
-      expect(mapBrowserTagToLocale('En-US')).to.equal(LOCALE_KEY.EnUs);
-    });
-
-    it('falls back to base when the specific tag is not present', () => {
-      // no specific fr-XX -> use base mapping 'fr'
-      expect(mapBrowserTagToLocale('fr-XX')).to.equal(LOCALE_KEY.Fr);
-      // zh-hant-XX -> base is 'zh' (which maps to ZhCn in the browser map)
-      expect(mapBrowserTagToLocale('ZH-hant-XX')).to.equal(LOCALE_KEY.ZhCn);
-    });
-
-    it('returns undefined when neither exact nor base exist', () => {
-      expect(mapBrowserTagToLocale('zz-QQ')).to.equal(undefined);
-    });
-  });
-
-  describe('resolveSupportedLocaleForBrowserTag', () => {
-    const SUPPORTED_DEMO: LocaleValue[] = [
-      LOCALE_KEY.Ar, // base arabic
-      LOCALE_KEY.ArAe, // a variant
-      LOCALE_KEY.FrFr,
-      LOCALE_KEY.FrCa,
-      LOCALE_KEY.EnUs,
-      LOCALE_KEY.EnGb,
-      LOCALE_KEY.EsEs,
-      LOCALE_KEY.ZhCn,
-      LOCALE_KEY.ZhHk,
-    ];
-
-    it('returns mapped locale when it is supported', () => {
-      expect(
-        resolveSupportedLocaleForBrowserTag('fr-CA', SUPPORTED_DEMO),
-      ).to.equal(LOCALE_KEY.FrCa);
-    });
-
-    it('when mapped is unsupported, uses short base if it is supported', () => {
-      // base 'ar' is supported
-      expect(
-        resolveSupportedLocaleForBrowserTag('ar-EG', SUPPORTED_DEMO),
-      ).to.equal(LOCALE_KEY.Ar);
-    });
-
-    it('when short base not supported, picks first variant of same base (customer order respected)', () => {
-      const supported: LocaleValue[] = [
-        LOCALE_KEY.ArAe,
-        LOCALE_KEY.FrFr,
-        LOCALE_KEY.EnUs,
-      ];
-      expect(resolveSupportedLocaleForBrowserTag('ar-OM', supported)).to.equal(
-        LOCALE_KEY.ArAe,
-      );
-    });
-
-    it('when short base not supported, picks first variant of same base (customer order respected)', () => {
-      const supported: LocaleValue[] = [
-        LOCALE_KEY.ArAe,
-        LOCALE_KEY.FrFr,
-        LOCALE_KEY.EnUs,
-      ];
-      expect(resolveSupportedLocaleForBrowserTag('ar', supported)).to.equal(
-        LOCALE_KEY.ArAe,
-      );
-    });
-
-    it('returns undefined if no base or variant is supported', () => {
-      const supported: LocaleValue[] = [LOCALE_KEY.FrFr, LOCALE_KEY.EnUs];
-      expect(resolveSupportedLocaleForBrowserTag('ar-OM', supported)).to.equal(
-        undefined,
-      );
-    });
-  });
-
   describe('getUserLocalesFromBrowserLanguages', () => {
     it('produces ordered, unique list constrained by supported', () => {
       const supported: LocaleValue[] = [
@@ -144,6 +67,27 @@ describe('locale-helpers', () => {
         LOCALE_KEY.EnUs,
       );
       expect(res).to.deep.equal([LOCALE_KEY.EnUs]);
+    });
+
+    it('prioritizes a later exact LOCALE_BROWSER_MAP hit over an earlier fuzzy/base match', () => {
+      // Supported has both a base (Ar) and a specific variant (ArAe)
+      const supported: LocaleValue[] = [
+        LOCALE_KEY.Ar,
+        LOCALE_KEY.ArAe,
+        LOCALE_KEY.EnUs,
+      ];
+
+      // Browser says a fuzzy base-match first (ar-OM -> Ar), then an exact map later (ar-AE -> ArAe)
+      const browser = ['ar-OM', 'ar-AE'];
+
+      const res = getUserLocalesFromBrowserLanguages(
+        browser,
+        supported,
+        LOCALE_KEY.EnUs,
+      );
+
+      // Exact (ArAe) should be before fuzzy/base (Ar)
+      expect(res).to.deep.equal([LOCALE_KEY.ArAe, LOCALE_KEY.Ar]);
     });
 
     it('short beats variant if both are supported', () => {

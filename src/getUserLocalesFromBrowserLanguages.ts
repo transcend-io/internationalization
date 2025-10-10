@@ -60,90 +60,60 @@ export function getLanguagesFromNavigator(
 }
 
 /**
- * Case-insensitive lookup of a browser tag in LOCALE_BROWSER_MAP,
- * with a fallback to its base tag.
- *
- * @param tag - Browser tag (any case, e.g., 'Es-Mx')
- * @returns LocaleValue if found, otherwise undefined
- */
-export function mapBrowserTagToLocale(tag: string): LocaleValue | undefined {
-  // normalize language
-  const lc = normalizeBrowserTag(tag);
-
-  // direct match if exists
-  if (lc in LOCALE_BROWSER_MAP_LOWERCASE) {
-    return LOCALE_BROWSER_MAP_LOWERCASE[lc];
-  }
-
-  // otherwise try base prefix
-  const baseLc = baseOf(lc);
-  if (baseLc in LOCALE_BROWSER_MAP_LOWERCASE) {
-    return LOCALE_BROWSER_MAP_LOWERCASE[baseLc];
-  }
-
-  // no direct match
-  return undefined;
-}
-
-/**
- * Resolve the best supported LocaleValue for a single browser tag.
- * Rule:
- *  1) Map via LOCALE_BROWSER_MAP (case-insensitive); if supported, use it.
- *  2) Otherwise, use the browser tag’s base prefix:
- *     a) if the short code (e.g., 'ar') is supported, use it
- *     b) else pick the first 'ar-*' in supportedLocales (preserves customer order)
- *
- * @param browserTag - Browser tag (e.g., 'ar-EG')
- * @param supportedLocales - Allowed locales (customer-ordered)
- * @returns Supported LocaleValue or undefined if no base match exists
- */
-export function resolveSupportedLocaleForBrowserTag(
-  browserTag: string,
-  supportedLocales: LocaleValue[],
-): LocaleValue | undefined {
-  const supportedSet = new Set(supportedLocales);
-
-  // look for direct match and accept that if in list
-  const mapped = mapBrowserTagToLocale(browserTag);
-  if (mapped && supportedSet.has(mapped)) {
-    return mapped;
-  }
-
-  // if no direct match, look for base prefix matches e.g. "ar-EG" -> "ar"
-  const prefixLc = baseOf(normalizeBrowserTag(browserTag));
-  const shortMatch = supportedLocales.find((l) => l.toLowerCase() === prefixLc);
-  if (shortMatch) {
-    return shortMatch;
-  }
-
-  // then first variant with same base
-  const variantMatch = supportedLocales.find(
-    (l) => l.includes('-') && baseOf(l).toLowerCase() === prefixLc,
-  );
-  return variantMatch;
-}
-
-/**
  * Map an ordered list of browser tags to supported LocaleValues using the resolve rule.
- * Keeps first-seen order from the browser list and de-duplicates.
- * Falls back to default if nothing matches.
+ * De-duplicates and preserves order, but prioritizes **exact LOCALE_BROWSER_MAP hits**
+ * over fuzzy/base matches across the whole list.
  *
  * @param browserLocales - Browser tags (ordered by user preference)
  * @param supportedLocales - Allowed locales (customer-ordered)
  * @param defaultLocale - Fallback when nothing matches (defaults to 'en')
- * @returns Ordered, unique supported LocaleValues
+ * @returns Ordered, unique supported LocaleValues with exact hits first
  */
 export function getUserLocalesFromBrowserLanguages(
   browserLocales: string[],
   supportedLocales: LocaleValue[],
   defaultLocale: LocaleValue,
 ): LocaleValue[] {
-  const resolved = browserLocales
-    .map((tag) => resolveSupportedLocaleForBrowserTag(tag, supportedLocales))
-    .filter((x): x is LocaleValue => Boolean(x));
+  const supportedSet = new Set(supportedLocales);
 
-  const unique = uniqOrdered(resolved);
-  return unique.length ? unique : [defaultLocale];
+  const exact: LocaleValue[] = [];
+  const fuzzy: LocaleValue[] = [];
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const tag of browserLocales) {
+    const lc = normalizeBrowserTag(tag);
+
+    // 1) Exact LOCALE_BROWSER_MAP match (case-insensitive)
+    const direct = LOCALE_BROWSER_MAP_LOWERCASE[lc];
+    if (direct && supportedSet.has(direct)) {
+      exact.push(direct);
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    // 2) Fuzzy prefix rule against *supportedLocales*:
+    const prefix = baseOf(lc);
+
+    // 2a) short/base code if supported
+    const short = supportedLocales.find((l) => l.toLowerCase() === prefix);
+    if (short) {
+      fuzzy.push(short);
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    // 2b) otherwise first variant of same base in customer order
+    const variant = supportedLocales.find(
+      (l) => l.includes('-') && baseOf(l).toLowerCase() === prefix,
+    );
+    if (variant) {
+      fuzzy.push(variant);
+    }
+  }
+
+  // Exact hits outrank any fuzzy/base matches globally
+  const ordered = uniqOrdered<LocaleValue>([...exact, ...fuzzy]);
+  return ordered.length ? ordered : [defaultLocale];
 }
 
 /**
