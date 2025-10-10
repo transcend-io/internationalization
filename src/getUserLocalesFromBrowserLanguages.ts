@@ -50,8 +50,8 @@ function uniqOrdered<T>(items: T[]): T[] {
 export function getLanguagesFromNavigator(
   languages = navigator.languages,
   language = navigator.language,
-): string[] {
-  const tags = (languages?.length ? languages : [language]) as string[];
+): BrowserLocaleKey[] {
+  const tags = (languages?.length ? languages : [language]) as BrowserLocaleKey[];
   return tags.map((t) => t.trim()).filter((x) => !!x);
 }
 
