@@ -97,6 +97,17 @@ describe('locale-helpers', () => {
       );
     });
 
+    it('when short base not supported, picks first variant of same base (customer order respected)', () => {
+      const supported: LocaleValue[] = [
+        LOCALE_KEY.ArAe,
+        LOCALE_KEY.FrFr,
+        LOCALE_KEY.EnUs,
+      ];
+      expect(resolveSupportedLocaleForBrowserTag('ar', supported)).to.equal(
+        LOCALE_KEY.ArAe,
+      );
+    });
+
     it('returns undefined if no base or variant is supported', () => {
       const supported: LocaleValue[] = [LOCALE_KEY.FrFr, LOCALE_KEY.EnUs];
       expect(resolveSupportedLocaleForBrowserTag('ar-OM', supported)).to.equal(
