@@ -1,4 +1,8 @@
-import { LocaleValue, LOCALE_BROWSER_MAP_LOWERCASE } from './enums';
+import {
+  LocaleValue,
+  BrowserLocaleKey,
+  LOCALE_BROWSER_MAP_LOWERCASE,
+} from './enums';
 
 /**
  * Normalize a BCP-47 browser language tag to lowercase.
@@ -51,7 +55,9 @@ export function getLanguagesFromNavigator(
   languages = navigator.languages,
   language = navigator.language,
 ): BrowserLocaleKey[] {
-  const tags = (languages?.length ? languages : [language]) as BrowserLocaleKey[];
+  const tags = (
+    languages?.length ? languages : [language]
+  ) as BrowserLocaleKey[];
   return tags.map((t) => t.trim()).filter((x) => !!x);
 }
 
