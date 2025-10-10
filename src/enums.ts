@@ -1603,6 +1603,18 @@ export const LOCALE_BROWSER_MAP = {
 /** Union of Browser locale keys */
 export type BrowserLocaleKey = keyof typeof LOCALE_BROWSER_MAP;
 
+/** Case-insensitive index for browser tag → LocaleValue */
+export const LOCALE_BROWSER_MAP_LOWERCASE = Object.entries(
+  LOCALE_BROWSER_MAP,
+).reduce(
+  (idx, [k, v]) => {
+    // eslint-disable-next-line no-param-reassign
+    idx[k.toLowerCase()] = v;
+    return idx;
+  },
+  {} as Record<string, LocaleValue>,
+);
+
 /**
  * Native language names, used to render options to users
  * Language options for end-users should be written in own language
