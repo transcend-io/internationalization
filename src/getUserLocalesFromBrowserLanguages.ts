@@ -55,10 +55,8 @@ export function getLanguagesFromNavigator(
   languages = navigator.languages,
   language = navigator.language,
 ): BrowserLocaleKey[] {
-  const tags = (
-    languages?.length ? languages : [language]
-  ) as BrowserLocaleKey[];
-  return tags.map((t) => t.trim()).filter((x) => !!x);
+  const tags = languages?.length ? languages : [language];
+  return tags.map((t) => t.trim()).filter((x) => !!x) as BrowserLocaleKey[];
 }
 
 /**
