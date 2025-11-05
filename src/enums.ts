@@ -1779,6 +1779,8 @@ export const NATIVE_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.BgBg]: 'български',
   /* Chinese Simplified */
   [LOCALE_KEY.ZhCn]: '汉语',
+  /* Chinese Simplified */
+  [LOCALE_KEY.ZhHans]: '汉语（简体）',
   /* Croatian */
   [LOCALE_KEY.HrHr]: 'Hrvatski',
   /* Czech */
@@ -2133,6 +2135,7 @@ export const EN_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.AfZz]: 'Afrikaans',
   [LOCALE_KEY.BgBg]: 'Bulgarian',
   [LOCALE_KEY.ZhCn]: 'Chinese (Simplified)',
+  [LOCALE_KEY.ZhHans]: 'Chinese (Simplified)',
   [LOCALE_KEY.HrHr]: 'Croatian',
   [LOCALE_KEY.CsCz]: 'Czech',
   [LOCALE_KEY.DaDk]: 'Danish',
