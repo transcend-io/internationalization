@@ -185,6 +185,8 @@ export const LOCALE_KEY = {
   ZhCn: 'zh-CN',
   /** Chinese (Traditional, Taiwan) */
   ZhTw: 'zh-TW',
+  /** Chinese (Simplified) */
+  ZhHans: 'zh-Hans',
   /** Croatian (Croatia) */
   HrHr: 'hr-HR',
   /** Czech (Czechia) */
@@ -620,6 +622,7 @@ export const LOCALE_TRANSLATION_MAP: {
   [LOCALE_KEY.EsEs]: AWS_SUPPORTED_TRANSLATIONS.Spanish,
   [LOCALE_KEY.Es419]: AWS_SUPPORTED_TRANSLATIONS.SpanishMexico,
   [LOCALE_KEY.ZhHk]: AWS_SUPPORTED_TRANSLATIONS.ChineseTraditional,
+  [LOCALE_KEY.ZhHans]: AWS_SUPPORTED_TRANSLATIONS.ChineseSimplified,
   [LOCALE_KEY.HeIl]: AWS_SUPPORTED_TRANSLATIONS.Hebrew,
   [LOCALE_KEY.EnNz]: AWS_SUPPORTED_TRANSLATIONS.English,
   [LOCALE_KEY.EtEe]: AWS_SUPPORTED_TRANSLATIONS.Estonian,
@@ -1580,22 +1583,22 @@ export const LOCALE_BROWSER_MAP = {
   // 'yo-BJ', // Yoruba (Benin) Èdè Yorùbá (Orílɛ́ède Bɛ̀nɛ̀)
   // 'yo-NG', // Yoruba (Nigeria) Èdè Yorùbá (Orílẹ́ède Nàìjíríà)
   yue: LOCALE_KEY.ZhHk, // Cantonese 粵語
-  'yue-Hans': LOCALE_KEY.ZhCn, // Cantonese (Simplified) 粤语 (简体)
-  'yue-Hans-CN': LOCALE_KEY.ZhCn, // Cantonese (Simplified, China) 粤语 (简体，中华人民共和国)
   'yue-Hant': LOCALE_KEY.ZhHk, // Cantonese (Traditional) 粵語 (繁體)
   'yue-Hant-HK': LOCALE_KEY.ZhHk, // Cantonese (Traditional, Hong Kong SAR China) 粵語 (繁體，中華人民共和國香港特別行政區)
+  'yue-Hans': LOCALE_KEY.ZhHans, // Cantonese (Simplified) 粤语 (简体)
+  'yue-Hans-CN': LOCALE_KEY.ZhHans, // Cantonese (Simplified, China) 粤语 (简体，中华人民共和国)
   // 'zgh', // Standard Moroccan Tamazight ⵜⴰⵎⴰⵣⵉⵖⵜ
   // 'zgh-MA', // Standard Moroccan Tamazight (Morocco) ⵜⴰⵎⴰⵣⵉⵖⵜ (ⵍⵎⵖⵔⵉⴱ)
-  zh: LOCALE_KEY.ZhCn, // Chinese 中文
-  'zh-Hans': LOCALE_KEY.ZhCn, // Chinese (Simplified) 中文（简体） Simplified Chinese
-  'zh-Hans-CN': LOCALE_KEY.ZhCn, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
-  'zh-Hans-HK': LOCALE_KEY.ZhCn, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
-  'zh-Hans-MO': LOCALE_KEY.ZhCn, // 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
-  'zh-Hans-SG': LOCALE_KEY.ZhCn, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
-  'zh-Hant': LOCALE_KEY.ZhHk, // Chinese (Traditional) 中文（繁體） Traditional Chinese
-  'zh-Hant-HK': LOCALE_KEY.ZhHk, // 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
+  zh: LOCALE_KEY.Zh, // Chinese 中文
+  'zh-Hans': LOCALE_KEY.ZhHans, // Chinese (Simplified) 中文（简体） Simplified Chinese
+  'zh-Hans-CN': LOCALE_KEY.ZhHans, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
+  'zh-Hans-SG': LOCALE_KEY.ZhHans, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
+  'zh-Hans-MO': LOCALE_KEY.ZhHans, // 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
+  'zh-Hans-HK': LOCALE_KEY.ZhHans, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
+  'zh-Hant': LOCALE_KEY.ZhTw, // Chinese (Traditional) 中文（繁體） Traditional Chinese
   'zh-Hant-MO': LOCALE_KEY.ZhHk, // 中文（繁體字，中國澳門特別行政區） Traditional Chinese (Macau SAR China)
-  'zh-Hant-TW': LOCALE_KEY.ZhHk, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
+  'zh-Hant-HK': LOCALE_KEY.ZhHk, // 中文（繁體字，中國香港特別行政區） Traditional Chinese (Hong Kong SAR China)
+  'zh-Hant-TW': LOCALE_KEY.ZhTw, // Chinese (Traditional, Taiwan) 中文（繁體，台灣） Traditional Chinese (Taiwan)
   zu: LOCALE_KEY.ZuZa, // Zulu isiZulu
   'zu-ZA': LOCALE_KEY.ZuZa, // Zulu (South Africa) isiZulu (iNingizimu Afrika)
 } as const satisfies Record<string, LocaleValue>;
@@ -1776,6 +1779,8 @@ export const NATIVE_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.BgBg]: 'български',
   /* Chinese Simplified */
   [LOCALE_KEY.ZhCn]: '汉语',
+  /* Chinese Simplified */
+  [LOCALE_KEY.ZhHans]: '汉语（简体）',
   /* Croatian */
   [LOCALE_KEY.HrHr]: 'Hrvatski',
   /* Czech */
@@ -2130,6 +2135,7 @@ export const EN_LANGUAGE_NAMES: Record<LocaleValue, string> = {
   [LOCALE_KEY.AfZz]: 'Afrikaans',
   [LOCALE_KEY.BgBg]: 'Bulgarian',
   [LOCALE_KEY.ZhCn]: 'Chinese (Simplified)',
+  [LOCALE_KEY.ZhHans]: 'Chinese (Simplified)',
   [LOCALE_KEY.HrHr]: 'Croatian',
   [LOCALE_KEY.CsCz]: 'Czech',
   [LOCALE_KEY.DaDk]: 'Danish',
