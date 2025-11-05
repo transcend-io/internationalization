@@ -1586,7 +1586,7 @@ export const LOCALE_BROWSER_MAP = {
   'yue-Hant': LOCALE_KEY.ZhHk, // Cantonese (Traditional) 粵語 (繁體)
   'yue-Hant-HK': LOCALE_KEY.ZhHk, // Cantonese (Traditional, Hong Kong SAR China) 粵語 (繁體，中華人民共和國香港特別行政區)
   'yue-Hans': LOCALE_KEY.ZhHans, // Cantonese (Simplified) 粤语 (简体)
-  'yue-Hans-CN': LOCALE_KEY.ZhCn, // Cantonese (Simplified, China) 粤语 (简体，中华人民共和国)
+  'yue-Hans-CN': LOCALE_KEY.ZhHans, // Cantonese (Simplified, China) 粤语 (简体，中华人民共和国)
   // 'zgh', // Standard Moroccan Tamazight ⵜⴰⵎⴰⵣⵉⵖⵜ
   // 'zgh-MA', // Standard Moroccan Tamazight (Morocco) ⵜⴰⵎⴰⵣⵉⵖⵜ (ⵍⵎⵖⵔⵉⴱ)
   zh: LOCALE_KEY.Zh, // Chinese 中文
