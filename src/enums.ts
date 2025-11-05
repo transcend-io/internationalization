@@ -1591,9 +1591,9 @@ export const LOCALE_BROWSER_MAP = {
   // 'zgh-MA', // Standard Moroccan Tamazight (Morocco) ⵜⴰⵎⴰⵣⵉⵖⵜ (ⵍⵎⵖⵔⵉⴱ)
   zh: LOCALE_KEY.Zh, // Chinese 中文
   'zh-Hans': LOCALE_KEY.ZhHans, // Chinese (Simplified) 中文（简体） Simplified Chinese
-  'zh-Hans-CN': LOCALE_KEY.ZhCn, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
-  'zh-Hans-SG': LOCALE_KEY.ZhCn, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
-  'zh-Hans-MO': LOCALE_KEY.ZhCn, // 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
+  'zh-Hans-CN': LOCALE_KEY.ZhHans, // Chinese (Simplified, China) 中文（简体，中国） Simplified Chinese (China)
+  'zh-Hans-SG': LOCALE_KEY.ZhHans, // Chinese (Simplified, Singapore) 中文（简体，新加坡） Simplified Chinese (Singapore)
+  'zh-Hans-MO': LOCALE_KEY.ZhHans, // 中文（简体，中国澳门特别行政区） Simplified Chinese (Macau SAR China)
   'zh-Hans-HK': LOCALE_KEY.ZhHans, // 中文（简体，中国香港特别行政区） Simplified Chinese (Hong Kong SAR China)
   'zh-Hant': LOCALE_KEY.ZhTw, // Chinese (Traditional) 中文（繁體） Traditional Chinese
   'zh-Hant-MO': LOCALE_KEY.ZhHk, // 中文（繁體字，中國澳門特別行政區） Traditional Chinese (Macau SAR China)
