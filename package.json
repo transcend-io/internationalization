@@ -2,7 +2,7 @@
   "author": "Transcend Inc.",
   "name": "@transcend-io/internationalization",
   "description": "Internationalization configuration for the monorepo",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "homepage": "https://github.com/transcend-io/internationalization",
   "repository": {
     "type": "git",
