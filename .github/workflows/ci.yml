@@ -111,7 +111,7 @@ jobs:
           retry_on: error
           command: yarn install --immutable
       - name: Publish to yarn/npm
-        run: yarn npm publish
+        run: yarn npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ''
 
