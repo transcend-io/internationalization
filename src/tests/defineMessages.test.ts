@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 
 // global
-import { defineMessages } from '../index';
+import { defineMessages } from '../index.js';
 
 describe('defineMessages', () => {
   it('ensure defineMessages returns identity', () => {

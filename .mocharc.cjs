@@ -1,12 +1,11 @@
 module.exports = {
-  require: ['ts-node/register/transpile-only'],
+  loader: ['./.pnp.loader.mjs'],
   ignore: [
     // Never look for test files in these folders
-    '**/build/**/*',
     '.yarn/**/*',
     '**/node_modules/**/*',
   ],
-  extension: ['ts'],
+  extension: ['js'],
   reporter: 'spec',
   reporterOptions: {
     configFile: 'mocha-reporter-config.json',
