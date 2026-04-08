@@ -1,4 +1,4 @@
-import { LocaleValue, LOCALE_KEY } from './enums';
+import { LocaleValue, LOCALE_KEY } from './enums.js';
 
 // The valid actions indexed by type
 const VALID_LOCALES: { [k in string]: LocaleValue } = {};

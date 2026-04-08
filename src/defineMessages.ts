@@ -1,5 +1,5 @@
 // local
-import { DefinedMessage } from './types';
+import { DefinedMessage } from './types.js';
 
 /**
  * Defined messages

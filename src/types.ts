@@ -1,5 +1,5 @@
 // local
-import type { LocaleValue } from './enums';
+import type { LocaleValue } from './enums.js';
 
 /**
  * Translations map from message id to translation string
