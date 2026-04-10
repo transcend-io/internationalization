@@ -2,7 +2,7 @@
   "author": "Transcend Inc.",
   "name": "@transcend-io/internationalization",
   "description": "Internationalization configuration for the monorepo",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://github.com/transcend-io/internationalization",
   "repository": {
     "type": "git",
@@ -14,7 +14,9 @@
   "exports": {
     ".": {
       "import": "./build/index.js",
-      "types": "./build/index.d.ts"
+      "types": "./build/index.d.ts",
+      "module-sync": "./build/index.js",
+      "default": "./build/index.js"
     }
   },
   "files": [
